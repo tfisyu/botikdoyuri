@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef } from "react";
-import Router from 'next/router';
 import submitData from '@/actions/actions';
 
 const AddParticipant: React.FC = () => {
@@ -51,9 +50,6 @@ const AddParticipant: React.FC = () => {
           </button>
         </div>
         <input disabled={!num || !name} type="submit" value="adicionar" className='h-10 bg-red-300 px-5 rounded text-white text-2xl cursor-pointer' />
-        <a className="back" href="#" onClick={() => Router.push('/')}>
-          or Cancel
-        </a>
       </form>
     </div>
   );
