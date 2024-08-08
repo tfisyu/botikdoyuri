@@ -11,5 +11,5 @@ export default async function submitData(formData: FormData) {
 			number: [number],
 		},
 	});
-	revalidatePath('@/app/page');
+	revalidatePath('../page');
 }

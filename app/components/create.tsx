@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef } from "react";
-import submitData from '@/actions/actions';
+import submitData from '../actions/actions';
 
 const AddParticipant: React.FC = () => {
   const buttonRef: { current: null | HTMLButtonElement } = useRef(null);
