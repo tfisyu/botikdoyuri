@@ -1,27 +1,22 @@
 import prisma from '@/lib/prisma'
 import React from 'react'
-import AddParticipant from './components/create'
+import { Card, Col, Row } from 'antd';
+import TheWinner from './components/theWinner';
 
-export default async function Page() {
+export default async function ShowParticipant() {
   const participants = await prisma.participant.findMany()
   return (
     <div>
-      nome desses bostas:
-      {participants.map((participant) => {
-        return (
-          <ul key={participant.id}>
-            {participant.name}
-            <li>
+      <Row gutter={24}>
+        {participants.map((participant) => (
+          <Col span={8} key={participant.id}>
+            <Card title={participant.name} bordered={true} size='small'>
               {participant.number.join(', ')}
-            </li>
-            <br />
-          </ul>
-        )
-      })}
-      <div>
-        AGORA VOCÊ PODE ADICIONAR CORNOS NO SEU SITE. CONFIRA ABAIXO:
-        <AddParticipant />
-      </div>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+      <TheWinner />
     </div>
   )
 }
