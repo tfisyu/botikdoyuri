@@ -16,8 +16,8 @@ export default function TheWinner() {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center gap-4 pt-16 text-3xl'>
-      <h1>QUEM VAI LEVAR OS 250 REAIS?</h1>
+    <div className='flex flex-col justify-center items-center gap-4 pt-16 text-3xl mt-24'>
+      <h1>Número do ganhador:</h1>
       <span>
         {winner}
       </span>
