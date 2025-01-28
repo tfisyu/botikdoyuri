@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Glass_Antiqua } from "next/font/google";
 import "./globals.css";
+import '@ant-design/v5-patch-for-react-19';
 
 const glass = Glass_Antiqua({ subsets: ["latin"], weight: '400' });
 

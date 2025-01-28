@@ -2,7 +2,7 @@ import prisma from '@/lib/prisma'
 import { Card, Col, Row } from 'antd'
 import React from 'react'
 
-export default async function showParticipant () {
+export default async function ShowParticipant () {
     const participants = await prisma.participant.findMany()
     
   return (
