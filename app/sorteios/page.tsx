@@ -22,7 +22,7 @@ const columns: TableProps<DataType>['columns'] = [
     dataIndex: 'date',
     key: 'date',
   },
-  
+
   {
     title: 'Ganhador(a/e)',
     dataIndex: 'winner',
@@ -43,16 +43,23 @@ const data: DataType[] = [
     winner: 'Ofélia',
     value: 'R$250'
   },
+  {
+    key: '2',
+    title: 'sorteio de páscoa',
+    date: '30/04/2025',
+    winner: 'Ícaro',
+    value: 'R$159,90'
+  }
 ];
 
-export default function Giveaway () {
+export default function Giveaway() {
   return (
     <div>
-      <Navbar/>
-      <Table 
+      <Navbar />
+      <Table
         <DataType> columns={columns} dataSource={data}
         size='small'
-        style={{margin: '0 5rem', padding: '1rem'}}
+        style={{ margin: '0 5rem', padding: '1rem' }}
       />
     </div>
   );
